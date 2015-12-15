@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.2.1'
 
-gem 'rails', '4.0.4'
+gem 'rails', '4.2.5'
 gem 'pg' # postgres
 
 # Use SCSS for stylesheets
@@ -19,6 +19,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -78,7 +79,8 @@ group :development, :test do
 end
 group :production do
   gem 'rails_12factor'
-  gem "passenger", '>= 4.0.18' # for heroku
+  # gem "passenger", '>= 4.0.18' # for heroku
+  gem 'puma'
   gem 'rollbar' # monitoring
   gem 'newrelic_rpm' # monitoring
 end
